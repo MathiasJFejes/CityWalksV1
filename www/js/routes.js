@@ -10,25 +10,63 @@ angular.module('app.routes', [])
     
   
 
-      .state('homePage', {
+      .state('menu.cityWalks', {
     url: '/page1',
-    templateUrl: 'templates/homePage.html',
-    controller: 'homePageCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/cityWalks.html',
+        controller: 'cityWalksCtrl'
+      }
+    }
   })
 
-  .state('login', {
-    url: '/page2',
-    templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
+  .state('menu', {
+    url: '/side-menu21',
+    templateUrl: 'templates/menu.html',
+    controller: 'menuCtrl'
   })
 
-  .state('signup', {
+  .state('menu.login', {
+    url: '/page0',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/login.html',
+        controller: 'loginCtrl'
+      }
+    }
+  })
+
+  .state('menu.nearbyRoutes', {
     url: '/page3',
-    templateUrl: 'templates/signup.html',
-    controller: 'signupCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/nearbyRoutes.html',
+        controller: 'nearbyRoutesCtrl'
+      }
+    }
   })
 
-$urlRouterProvider.otherwise('/page2')
+  .state('menu.createRoute', {
+    url: '/page2',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/createRoute.html',
+        controller: 'createRouteCtrl'
+      }
+    }
+  })
+
+  .state('menu.topRoutes', {
+    url: '/page4',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/topRoutes.html',
+        controller: 'topRoutesCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/side-menu21/page0')
 
   
 

@@ -1,9 +1,14 @@
-<ion-view title="Login" id="page2">
-  <ion-content padding="true" class="has-header">
+<ion-view title="Login" hide-nav-bar="true" hide-back-button="true" id="page4">
+  <ion-content padding="true" style="background: url(img/tOEbyN5PQUSXs2Mo43cP_know-before-you-go-new-york-city-manhattan.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding" scroll="false">
     <form id="login-form1" class="list">
-      <ion-list id="login-list1">
+      <div class="spacer" style="width: 300px; height: 44px;"></div>
+      <div>
+        <img src="img/nRsFpnSGRebHX3QppJen_CityWalkingLogoNewPNG.png" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 21px;"></div>
+      <ion-list id="login-list2">
         <label class="item item-input" id="login-input1">
-          <span class="input-label">Username</span>
+          <span class="input-label">Uname</span>
           <input type="text" placeholder="">
         </label>
         <label class="item item-input" id="login-input2">
@@ -11,9 +16,13 @@
           <input type="password" placeholder="">
         </label>
       </ion-list>
-      <div class="spacer" style="height: 40px;"></div>
-      <a ui-sref="homePage" id="login-button1" class="button button-stable  button-block">Log in</a>
-      <a ui-sref="signup" id="login-button2" class="button button-positive  button-block button-clear">Or create an account</a>
+      <div class="spacer" style="width: 300px; height: 22px;"></div>
+      <a ui-sref="menu.cityWalks" id="login-button1" style="font-weight:600;color:#FFFFFF;border-radius:15px 15px 15px 15px;" class="button button-royal  button-block">Sign In</a>
+      <button id="login-button2" style="font-weight:600;color:#FFFFFF;" class="button button-light  button-block button-clear">Forgot password?</button>
+      <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#FFFFFF;">OR</p>
+      </div>
+      <a href-inappbrowser="/signup" id="login-button3" style="font-weight:600;color:#FFFFFF;" class="button button-light  button-block button-clear">Create account</a>
     </form>
   </ion-content>
 </ion-view>
