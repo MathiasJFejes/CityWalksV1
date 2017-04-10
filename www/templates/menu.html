@@ -13,14 +13,22 @@
       <div class="title">Menu</div>
     </ion-header-bar>
     <ion-content padding="false" class="side-menu-left has-header ">
+      <div class="profile-image">
+        <img src="img/nope" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;" gravatar-src="userData.email" gravatar-size="100">
+      </div>
+      <div id="menu-markdown8" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">
+          <strong>User: {{userData.name}}</strong>
+        </p>
+      </div>
       <ion-list id="menu-list1">
-        <ion-item class="item-icon-left balanced" id="menu-list-item1" ui-sref="menu.createRoute" menu-close="">
+        <ion-item class="item-icon-left balanced" id="menu-list-item1" ui-sref="menu.cityWalks" menu-close="">
           <i class="icon ion-plus"></i>Create route</ion-item>
         <ion-item class="item-icon-left" id="menu-list-item2" ui-sref="menu.nearbyRoutes" menu-close="">
           <i class="icon ion-android-pin"></i>Nearby routes</ion-item>
         <ion-item class="item-icon-left" id="menu-list-item3" ui-sref="menu.topRoutes" menu-close="">
           <i class="icon ion-trophy"></i>Top routes</ion-item>
-        <ion-item class="item-icon-left" id="menu-list-item6">
+        <ion-item class="item-icon-left" id="menu-list-item6" ui-sref="menu.myRouts" menu-close="">
           <i class="icon ion-android-person"></i>My routes</ion-item>
         <ion-item class="item-icon-left" id="menu-list-item5">
           <i class="icon ion-android-people"></i>Friends routes</ion-item>
@@ -28,7 +36,7 @@
           <i class="icon ion-android-walk"></i>Record route</ion-item>
         <ion-item class="item-icon-left" id="menu-list-item8">
           <i class="icon ion-android-settings"></i>Settings</ion-item>
-        <ion-item class="item-icon-left assertive" id="menu-list-item9" ui-sref="menu.login" menu-close="">
+        <ion-item class="item-icon-left assertive" id="menu-list-item9" ng-click="logout()">
           <i class="icon No Icon"></i>Log out</ion-item>
       </ion-list>
     </ion-content>

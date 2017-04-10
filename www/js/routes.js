@@ -26,14 +26,16 @@ angular.module('app.routes', [])
     controller: 'menuCtrl'
   })
 
-  .state('menu.login', {
+  .state('login', {
     url: '/page0',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/login.html',
-        controller: 'loginCtrl'
-      }
-    }
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
+  .state('signup', {
+    url: '/page9',
+    templateUrl: 'templates/signup.html',
+    controller: 'signupCtrl'
   })
 
   .state('menu.nearbyRoutes', {
@@ -46,14 +48,10 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.createRoute', {
+  .state('createRoute', {
     url: '/page2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/createRoute.html',
-        controller: 'createRouteCtrl'
-      }
-    }
+    templateUrl: 'templates/createRoute.html',
+    controller: 'createRouteCtrl'
   })
 
   .state('menu.topRoutes', {
@@ -66,7 +64,17 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page0')
+  .state('menu.myRouts', {
+    url: '/page10',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/myRouts.html',
+        controller: 'myRoutsCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/page0')
 
   
 

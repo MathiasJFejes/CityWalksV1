@@ -4,7 +4,7 @@
   "gulpDependantTasks" : [
     "sass"
   ],  
-   "gulpStartupTasks": [        
-    "watch"
+   "gulpStartupTasks": [
+    "sass", "watch"
   ]
 }
