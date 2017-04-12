@@ -26,12 +26,28 @@ angular.module('app.routes', [])
     controller: 'menuCtrl'
   })
 
-  .state('menu.login', {
+  .state('login', {
     url: '/page0',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
+
+  .state('menu.signup', {
+    url: '/page9',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/login.html',
-        controller: 'loginCtrl'
+        templateUrl: 'templates/signup.html',
+        controller: 'signupCtrl'
+      }
+    }
+  })
+
+  .state('menu.resetPassword', {
+    url: '/page11',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/resetPassword.html',
+        controller: 'resetPasswordCtrl'
       }
     }
   })
@@ -46,14 +62,10 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.createRoute', {
+  .state('createRoute', {
     url: '/page2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/createRoute.html',
-        controller: 'createRouteCtrl'
-      }
-    }
+    templateUrl: 'templates/createRoute.html',
+    controller: 'createRouteCtrl'
   })
 
   .state('menu.topRoutes', {
@@ -66,7 +78,27 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page0')
+  .state('menu.myRoutes', {
+    url: '/page10',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/myRoutes.html',
+        controller: 'myRoutesCtrl'
+      }
+    }
+  })
+
+  .state('menu.settings', {
+    url: '/page12',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/settings.html',
+        controller: 'settingsCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/page0')
 
   
 
