@@ -32,24 +32,16 @@ angular.module('app.routes', [])
     controller: 'loginCtrl'
   })
 
-  .state('menu.signup', {
+  .state('signup', {
     url: '/page9',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/signup.html',
-        controller: 'signupCtrl'
-      }
-    }
+    templateUrl: 'templates/signup.html',
+    controller: 'signupCtrl'
   })
 
-  .state('menu.resetPassword', {
+  .state('resetPassword', {
     url: '/page11',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/resetPassword.html',
-        controller: 'resetPasswordCtrl'
-      }
-    }
+    templateUrl: 'templates/resetPassword.html',
+    controller: 'resetPasswordCtrl'
   })
 
   .state('menu.nearbyRoutes', {
